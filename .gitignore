@@ -1,0 +1,14 @@
+*.db
+*.duckdb
+*.wal
+duckdb.exe
+*.ini
+# *.parquet
+*.hyper
+*.pbix
+
+logs
+*.tmp
+*.pyc
+
+.venv/

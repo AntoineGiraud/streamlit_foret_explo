@@ -1,0 +1,34 @@
+[project]
+name = "py-script-store"
+version = "0.1.0"
+description = "Trials with various python projects"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "duckdb>=1.2.2",
+    "loguru>=0.7.3",
+    "pandas>=2.2.3",
+    "pendulum>=3.1.0",
+    "polars>=1.29.0",
+    "pyarrow>=20.0.0",
+    "python-slugify>=8.0.4",
+    "pyyaml>=6.0.2",
+    "requests>=2.32.3",
+    "python-dotenv>=1.1.0",
+    "streamlit>=1.46.0",
+    "folium>=0.20.0",
+    "streamlit-folium>=0.25.0",
+    "shapely>=2.1.1",
+    "numpy>=2.3.0",
+    "geopandas>=1.1.1",
+]
+
+[tool.ruff]
+line-length = 200
+
+[dependency-groups]
+dev = [
+    "pretty-errors>=1.2.25",
+    "ruff>=0.11.8",
+    "sqlfluff>=3.4.0",
+]
