@@ -54,7 +54,7 @@ df = st.session_state["grid_data"]
 selection_name = st.session_state["selection_name"]
 selection_geometry = st.session_state["selection_geometry"]
 
-st.title(f"🗺️ Analyse Interactive : {selection_name}")
+st.title(f"🗺️ Analyse Interactive")
 
 if "drawings" not in st.session_state:
     st.session_state.drawings = []
@@ -62,7 +62,7 @@ if "drawings" not in st.session_state:
 # --- Mise en page et création de la carte ---
 col1, col2 = st.columns([0.5, 0.5])
 with col1:
-    st.subheader("Carte des placettes")
+    st.subheader(f"{selection_name} `{len(df)} placettes`")
     map_center = [df["latitude"].mean(), df["longitude"].mean()]
     m = folium.Map(location=map_center, zoom_start=12)
     Draw(
@@ -130,12 +130,14 @@ with col2:
 
     if not selected_points_df.is_empty():
         st.success(f"**{len(selected_points_df)}** placette(s) sélectionnée(s) !")
+
         avg_height = selected_points_df["hauteur_moyenne_arbres"].mean()
         avg_density = selected_points_df["densite"].mean()
         metric1, metric2 = st.columns(2)
         metric1.metric(label="Hauteur moyenne", value=f"{avg_height:.1f} m")
         metric2.metric(label="Densité moyenne", value=f"{avg_density:.0f} arbres/ha")
-        st.write("### Données sélectionnées :")
+
+        st.write("### Placettes sélectionnées :")
         st.dataframe(selected_points_df.select(["placette_id", "hauteur_moyenne_arbres", "densite"]))
     else:
         st.info("👈 Cliquez sur un point ou utilisez les outils pour dessiner une zone.")
