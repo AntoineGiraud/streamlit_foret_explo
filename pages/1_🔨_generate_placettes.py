@@ -3,11 +3,11 @@ import geopandas as gpd
 import polars as pl
 from shapely.geometry import Point
 import numpy as np
-import folium
-from streamlit_folium import st_folium
+# import folium
+# from streamlit_folium import st_folium
 
 # --- Configuration de la Page ---
-st.set_page_config(page_title="Configuration de la Grille", page_icon="🗺", layout="wide")
+st.set_page_config(page_title="Configuration de la Grille", page_icon="🔨", layout="wide")
 
 st.title("Génération de placettes 🌲 par commune")
 st.info("Comunnes & départements issus du découpage administratif [Geofla](https://geoservices.ign.fr/geofla)")
@@ -111,7 +111,7 @@ with col_resultat:
         grid_df = st.session_state["grid_data"]
         commune_gdf = st.session_state["commune_gdf"]
 
-        st.page_link("pages/1_🌳_explore_placettes.py", label="👉 Les données sont prêtes ! RDV sur la page d'exploration")
+        st.page_link("pages/2_🕵️‍♂️_explore_placettes.py", label="👉 Les données sont prêtes ! RDV sur la page d'exploration")
 
         st.write("Données sur la commune")
         st.dataframe(commune_gdf)
