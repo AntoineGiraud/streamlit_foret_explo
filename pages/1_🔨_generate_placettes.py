@@ -68,7 +68,7 @@ geodata = load_geodata("data/communes_geofla.parquet")
 # --- Interface Utilisateur ---
 
 
-col_param, col_resultat = st.columns([0.5, 0.5])
+col_param, col_resultat = st.columns([1, 1])
 
 with col_param:
     st.header("Paramétrage")

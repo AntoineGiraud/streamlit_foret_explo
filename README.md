@@ -1,6 +1,6 @@
 # Streamlit pour exploration de forêts (placettes)
 
-Cette app streamlit est née autour d'un besoin de l'Office National des Forêts (ONF) : pouvoir explorer des relevés de forêts. Des recensements sont réalisées dans nos forêts afin de connaître leur santé & disposition. Les forêts sont alors quadrillées en placettes et des relevés y sont associés (nb d'arbres & essences, hauteur moyenne, grosseur moyenne...).
+Cette [app streamlit](https://simulation-placette-foret.streamlit.app) est née autour d'un besoin de l'Office National des Forêts (ONF) : pouvoir explorer des relevés de forêts. Des recensements sont réalisées dans nos forêts afin de connaître leur santé & disposition. Les forêts sont alors quadrillées en placettes et des relevés y sont associés (nb d'arbres & essences, hauteur moyenne, grosseur moyenne...).
 
 Cette appplication contient 2 parties :
 
@@ -17,6 +17,8 @@ Cette appplication contient 2 parties :
 
 1. installer uv 👉 cf. [doc astral/uv](https://docs.astral.sh/uv/getting-started/installation/)
 2. lancer l'app streamlit : `uv run streamlit run home.py`
+
+Ou en ligne sur Streamlit : 👉 [simulation-placette-foret.streamlit.app](https://simulation-placette-foret.streamlit.app/)
 
 ## Inspirations & ressources
 
