@@ -5,8 +5,8 @@ description = "POC exploration des relevés des placettes forêts de l'ONF"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "polars>=1.29.0",
-    "streamlit>=1.46.0",
+    "polars>=1.35.0",
+    "streamlit>=1.52.0",
     "folium>=0.20.0",
     "streamlit-folium>=0.25.0",
     "shapely>=2.1.1",
@@ -21,4 +21,12 @@ line-length = 200
 dev = [
     "pretty-errors>=1.2.25",
     "ruff>=0.11.8",
+]
+
+
+[tool.uv]
+dev-dependencies = [
+    "pre-commit>=4.4.0",
+    "pytest>=9.0.0",
+    "ruff>=0.14.4",
 ]
