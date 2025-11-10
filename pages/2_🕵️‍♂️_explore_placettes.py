@@ -54,7 +54,7 @@ df = st.session_state["grid_data"]
 selection_name = st.session_state["selection_name"]
 selection_geometry = st.session_state["selection_geometry"]
 
-st.title(f"🗺️ Analyse Interactive")
+st.title("🗺️ Analyse Interactive")
 
 if "drawings" not in st.session_state:
     st.session_state.drawings = []
